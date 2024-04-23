@@ -1,0 +1,123 @@
+body {
+  background: #616161;
+  overflow: hidden;
+  background-image: url("./bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.title {
+  background-color: #7f9f80;
+  border-radius: 5px;
+  padding: 5px;
+  font-family: fantasy;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 450px;
+  margin-right: 450px;
+  margin-top: 100px;
+}
+#title-text {
+  color: whitesmoke;
+  size: 100%;
+  text-shadow: #616161;
+  font-family: cursive;
+}
+.middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  margin-bottom: 30px;
+  margin-top: 80px;
+
+  flex-direction: column;
+
+  height: calc(100% - 100px); /* Adjust height to fit remaining space */
+}
+
+.fill {
+  height: 200px;
+  width: 600px;
+  background-color: #d2dfd3;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 30px;
+  text-decoration: solid;
+  font-family: monospace;
+  margin-left: 20px;
+
+  max-height: 100%;
+  max-width: 100%;
+  background-color: #d2dfd3;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  font-family: monospace;
+  font-size: 1em; /* Set initial font size */
+  overflow: auto;
+}
+
+#button-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#button {
+  width: 100px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #124076;
+  color: white;
+  font-size: larger;
+  font-weight: 1800;
+  font-family: cursive;
+}
+#button:active {
+  background-color: #0c2d54;
+  width: 105px;
+  height: 62.5px;
+}
+/* Adjust margins for smaller screens */
+@media (max-width: 768px) {
+  .title {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+/* Adjust margins for larger screens */
+@media (min-width: 769px) {
+  .title {
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+}
+.container {
+  height: 100vh;
+  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 90vh; /* Set maximum height to 90% of the viewport height */
+  overflow-y: auto;
+}
+
+.content {
+  padding-bottom: 100px; /* Add some padding at the bottom to make space for the button */
+}
+
+#button-div {
+  position: fixed; /* Keep the button fixed at the bottom of the viewport */
+  bottom: 0;
+  width: 100%;
+  background-color: #f9f9f9; /* Background color for contrast */
+  padding: 10px 0; /* Add padding for better appearance */
+  text-align: center; /* Center-align the button */
+  z-index: 1; /* Ensure the button is above other content */
+}
