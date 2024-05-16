@@ -3,34 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dogs Facts</title>
-    <link type="text/css" rel="stylesheet" href="./style.css" />
+    <title>Interactive Emojis</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="title">
-      <h1 id="title-text">Fun facts about Dogs</h1>
-    </div>
-    <div>
-      <div class="middle">
-        <img
-          src="./dog.jpg"
-          id="dogimg"
-          alt="dog-image"
-          height="300px"
-          width="300px"
-          border-radius="50%"
-        />
-        <h1 id="facts" class="fill">
-          Press "Next" to learn interesting facts about dogs
-        </h1>
+    <div class="container">
+      <h1 class="bold-heading">Interesting Dog's Facts</h1>
+      <div class="content">
+        <div class="image-box">
+          <img
+            src="./dog.jpg"
+            alt="dog image"
+            class="rounded-image"
+            id="dogimg"
+          />
+        </div>
+        <div class="text-box">
+          <!-- Insert your text here -->
+          <p id="facts" class="glow">
+            1. Press Next button to proceed. <br />
+            2. React to each pics and facts using relevant emoji.<br />
+            3. You can't proceed without reacting.
+          </p>
+        </div>
+      </div>
+      <button
+        class="glass-button floating move-away-button"
+        id="button"
+        onclick="this.classList.toggle('flipped');
+         finalFunction();
+         "
+      >
+        Next
+      </button>
+      <div class="emojis">
+        <button class="emoji" id="emoji1" onclick="reacted()">😊</button>
+        <button class="emoji" id="emoji2" onclick="reacted()">😢</button>
+        <button class="emoji" id="emoji3" onclick="reacted()">😡</button>
+        <button class="emoji" id="emoji4" onclick="reacted()">😍</button>
+        <button class="emoji" id="emoji5" onclick="reacted()">😱</button>
+      </div>
+      <div class="language">
+        <form onsubmit="changeLanguage(event)">
+          <label for="language"></label>
+          <select id="language" name="language">
+            <option value="Hindi">Hindi</option>
+            <option value="English">English</option>
+            <option value="Bengali">Bengali</option>
+            <option value="Tamil">Tamil</option>
+            <option value="Telugu">Telugu</option>
+          </select>
+        </form>
       </div>
     </div>
-    <div id="button-div">
-      <button id="button" onclick="displayFacts(); displayDogImage()">
-        ⏭️ Next
-      </button>
-    </div>
-
-    <script type="text/javascript" src="./index.js"></script>
+    <h3 class="copyright">© 2024 devPankaj</h3>
+    <script src="./index.js"></script>
   </body>
 </html>
